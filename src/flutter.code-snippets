@@ -1,0 +1,87 @@
+{
+    "AppEss Get Api call": {
+      "prefix": "getapi",
+      "description": "Create a new get api call",
+      "body": [
+        "\tFuture<dynamic> ${1:getData}() async {",
+            "\tfinal DioBuilderResponse dioBuilderResponse =",
+                "\t\t\tawait DioBuilder().buildNonCachedDio(hasAuth: true);",
+            "\tfinal Response response = await dioBuilderResponse.dio.get(",
+             "\t\t${2:getUrl},",
+              "\t\toptions: dioBuilderResponse.dioOptions,",
+            "\t);",
+            "\treturn response;",
+          "\t}"
+      ]
+    },
+    "AppEss Post Api call": {
+        "prefix": "postapi",
+        "description": "Create a new post api call",
+        "body": [
+            "\tFuture<dynamic> ${1:sendData}(${2:RequestModel} requestModel) async {",
+                "\tfinal DioBuilderResponse dioBuilderResponse =",
+                    "\t\t\tawait DioBuilder().buildNonCachedDio(hasAuth: true);",
+                "\tfinal Response response = await dioBuilderResponse.dio.post(",
+                  "\t\t${3:postUrl},",
+                  "\t\toptions: dioBuilderResponse.dioOptions,",
+                  "\t\tdata: requestModel.toJson(),",
+                "\t);",
+                "\treturn response;",
+              "\t}"
+        ]
+      },
+
+      "AppEss Get Repository Method": {
+        "prefix": "getrepository",
+        "description": "Create a new get repository method",
+        "body": [
+            "Future<bool> ${2:sendData}($3) async {",
+                "\ttry {",
+                  "\t\tfinal ResponseModel<${4:ResponseModel}> responseModel =",
+                      "\t\t\t\tawait ResponseModel.fromApiResponse<${4:ResponseModel}>(",
+                    "\t\t\t() async => await fundraisingService.addFundraising(),",                 
+                    "\t\t\t(body) => ${4:ResponseModel}.fromJson(body),",
+                  "\t\t);",
+                 "\t\tif (responseModel.status == ResponseStatus.success) {",
+                    "\t\t\treturn true;",
+                  "\t\t} else if (responseModel.status == ResponseStatus.responseError ||",
+                      "\t\t\t\tresponseModel.status == ResponseStatus.nullResponse) {",
+                    "\t\t\tSnackbarManager().showAlertSnackbar(responseModel.error!);",
+                  "\t\t}",
+                "\t} on Exception catch (e) {",
+                  "\t\tExceptionHandler().handle(e);",
+                  "\t\treturn $5;",
+                "\t}",
+                "\treturn $5;",
+              "}"
+        ]
+      },
+
+    "AppEss Post Repository Method": {
+        "prefix": "postrepository",
+        "description": "Create a new post repository method",
+        "body": [
+            "Future<bool> ${1:sendData}($2) async {",
+                "\ttry {",
+                  "\t\tfinal ResponseModel<${3:ResponseModel}> responseModel =",
+                      "\t\t\t\tawait ResponseModel.fromApiResponse<${3:ResponseModel}>(",
+                    "\t\t\t() async => await fundraisingService.addFundraising(),",                 
+                    "\t\t\t(body) => ${3:ResponseModel}.fromJson(body),",
+                  "\t\t);",
+                 "\t\tif (responseModel.status == ResponseStatus.success) {",
+                    "\t\t\treturn true;",
+                  "\t\t} else if (responseModel.status == ResponseStatus.responseError ||",
+                      "\t\t\t\tresponseModel.status == ResponseStatus.nullResponse) {",
+                    "\t\t\tSnackbarManager().showAlertSnackbar(responseModel.error!);",
+                  "\t\t}",
+                "\t} on Exception catch (e) {",
+                  "\t\tExceptionHandler().handle(e);",
+                  "\t\treturn false;",
+                "\t}",
+                "\treturn false;",
+              "}"
+        ]
+      }
+   
+  }
+  

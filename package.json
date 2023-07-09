@@ -1,5 +1,6 @@
 {
   "name": "app-essentials-snippets",
+  "publisher":"Talhas",
   "displayName": "app_essentials_snippets",
   "description": "",
   "version": "0.0.1",
@@ -9,6 +10,10 @@
   "categories": [
     "Other"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ztalha6/app_essentials_extension.git"
+  },
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {

@@ -50,7 +50,7 @@ This extension is licensed under the [MIT License](LICENSE).
 
 For any feedback, suggestions, or bug reports, please create an issue on the [GitHub repository](https://github.com/ztalha6/app_essentials_extension).
 
-If you need assistance or have any questions, feel free to contact the extension author [your-name](mailto:ztalha6@gmail.com).
+If you need assistance or have any questions, feel free to contact the extension author [muhammad-talha](mailto:ztalha6@gmail.com).
 
 ## Release Notes
 

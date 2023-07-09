@@ -1,8 +1,6 @@
-Sure! Here's a sample README file for your VS Code extension, "App Essentials Snippets":
-
 # App Essentials Snippets
 
-App Essentials Snippets is a Visual Studio Code extension that provides code snippets for the App Essentials package published on Pub.dev. This extension aims to streamline your development process by offering a collection of commonly used code snippets for the Flutter App Essentials package.
+App Essentials Snippets is a Visual Studio Code extension that provides code snippets for the App Essentials package published on [Pub.dev](https://pub.dev/packages/app_essentials). This extension aims to streamline your development process by offering a collection of commonly used code snippets for the Flutter App Essentials package.
 
 ## Features
 
@@ -28,12 +26,10 @@ App Essentials Snippets is a Visual Studio Code extension that provides code sni
 
 The extension currently provides the following snippets:
 
-- `aeplatform`: Import statements for platform detection.
-- `aeappname`: Code snippet to set the app name.
-- `aepackagename`: Code snippet to set the app package name.
-- `aefontfamily`: Code snippet to set the default font family.
-- `aeorientation`: Code snippet to set the app orientation.
-- `aelocale`: Code snippet to set the app locale.
+- `getapi`: Code snippet to create a new get api call.
+- `postapi`: Code snippet to create a new post api call.
+- `getrepository`: Code snippet to create a new get repository method.
+- `postrepository`: Code snippet to create a new post repository method.
 
 Please note that this extension assumes you have the App Essentials package installed in your Flutter project.
 
@@ -52,9 +48,9 @@ This extension is licensed under the [MIT License](LICENSE).
 
 ## Feedback and Support
 
-For any feedback, suggestions, or bug reports, please create an issue on the [GitHub repository](https://github.com/your-username/app-essentials-snippets).
+For any feedback, suggestions, or bug reports, please create an issue on the [GitHub repository](https://github.com/ztalha6/app_essentials_extension).
 
-If you need assistance or have any questions, feel free to contact the extension author [your-name](mailto:your-email@example.com).
+If you need assistance or have any questions, feel free to contact the extension author [your-name](mailto:ztalha6@gmail.com).
 
 ## Release Notes
 
